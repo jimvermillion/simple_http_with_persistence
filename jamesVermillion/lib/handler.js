@@ -19,7 +19,7 @@ module.exports = function(){
     }
     var ws = fs.createWriteStream(__dirname + '/../json' + req.url, req );
     req.pipe(ws);
-    res.writeHead(200, {'Content-Type': 'application/json'});
+    res.writeHead(200, {'Content-Type': 'text/plain'});
     res.write('your file has been stored as: ' + __dirname + '/../json' + req.url); 
     res.end();
   });
